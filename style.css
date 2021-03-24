@@ -17,17 +17,30 @@ a {
 .wrapper {
     display: flex;
     flex-flow: column;
+    height: 100vh;
     /* width: 100%; */
     /* justify-content: space-evenly; */
+}
+
+.sticky__nav {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: -30px;
+    background-color: #fff;
+    z-index: 2;
 }
 
 .top__nav {
     display: flex;
     width: 100%;
+    height: 110px;
     padding: 2rem 3rem 0 3rem;
     justify-content: space-around;
     align-items: center;
     position: sticky;
+    z-index: 2;
 }
 
 .logo__image {
@@ -52,10 +65,12 @@ a {
 
 .top__nav--elements:hover {
     color: #FE5C81;
+    text-decoration: underline;
+    transition: linear 0.5s;
 }
 
 .address {
-    width: 1rem;
+    width: 2rem;
     flex-grow: 1;
     margin-right: 1rem;
     /* margin-left: 150px; */
@@ -63,7 +78,7 @@ a {
 
 .address__icon {
     width: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .address__data {
@@ -78,21 +93,21 @@ a {
 
 .phone {
     width: 1rem;
-    height: 100%;
+    /* height: 100%; */
     flex-grow: 1;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-right: 3rem;
+    /* margin-right: 3rem; */
     /* flex-grow: 1; */
 }
 
 .phone__icon {
     width: 1.5rem;
     flex-grow: 1;
-    margin-top: -3.3rem;
-    margin-bottom: 0.8rem;
+    margin-top: -1.3rem;
+    margin-bottom: 0.6rem;
 }
 
 .phone__number {
@@ -100,10 +115,10 @@ a {
 }
 
 .main__content {
-    height: 100vh;
+    height: 100%;
     background-color: #F4F5F4;
-    margin: 1.5rem 0;
-    padding: 0rem 0rem 0 3rem;
+    margin: 1.5rem 0 0 0;
+    padding: 0 0 0 3rem;
     display: flex;
     justify-content: flex-start;
     /* align-items: center; */
@@ -127,8 +142,9 @@ a {
     flex-grow: 1;
     background: #37537E;
     color: white;
-    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
     padding: 0 0%;
+    position: relative;
 }
 
 .welcome__button {
@@ -147,4 +163,15 @@ a {
     border: #37537E 3px solid;
     color: #37537E;
     transition: linear 0.5s;
+}
+
+.presentation {
+    height: 50%;
+    position: absolute;
+    border: 10px solid black;
+    margin-top: 20%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%, 0);
+    border-radius: 0 0px;
+    clip-path: polygon(30% 0, 80% 0%, 100% 0, 100% 60%, 70% 100%, 0 100%, 0% 80%, 0 40%);
 }
