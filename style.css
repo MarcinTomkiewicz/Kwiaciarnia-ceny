@@ -283,6 +283,20 @@ main {
     justify-content: space-evenly;
 }
 
+.slider::before {
+    margin-left: -1.4rem;
+}
+
+.slider::after {
+    margin-right: -1.4rem;
+}
+
+.slide__image {
+    height: 300px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
 .left__panel {
     position: absolute;
     z-index: 2;
@@ -303,20 +317,6 @@ main {
     top: 50%;
     left: 98%;
     transform: translate3d(-10%, -50%, 0);
-}
-
-.slider::before {
-    margin-left: -1.4rem;
-}
-
-.slider::after {
-    margin-right: -1.4rem;
-}
-
-.slide__image {
-    height: 300px;
-    margin-left: 2rem;
-    margin-right: 2rem;
 }
 
 .left__arrow {
