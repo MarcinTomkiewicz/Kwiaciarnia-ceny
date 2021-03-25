@@ -40,6 +40,10 @@ a {
 
 .large__foto {
     display: none;
+}
+
+.large__foto--display {
+    display: block;
     position: fixed;
     z-index: 3;
     padding-top: 80px;
@@ -59,7 +63,7 @@ a {
     top: 32px;
     width: 32px;
     height: 32px;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .close:hover {
@@ -72,8 +76,8 @@ a {
     left: 15px;
     content: ' ';
     height: 33px;
-    width: 2px;
-    background-color: #333;
+    width: 6px;
+    background-color: #FE5C81;
 }
 
 .close:before {
@@ -85,12 +89,45 @@ a {
 }
 
 .large__foto--element {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    width: 500px;
+    margin: auto;
+    display: block;
+    /* width: auto; */
+    height: 75vh;
+    /* max-width: 700px; */
+    border-radius: 7rem 0;
+    border: 3px solid #FE5C81;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
 }
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+
+/* transition: linear 1s 0.5s; */
+
+
+/* } */
 
 .wrapper {
     display: flex;
@@ -216,17 +253,6 @@ a {
     margin: 0;
 }
 
-.example {
-    flex-grow: 1;
-    background: #37537E;
-    color: white;
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-    padding: 0 0;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-}
-
 .welcome__button {
     border: 3px solid #FE5C81;
     background-color: #FE5C81;
@@ -245,13 +271,28 @@ a {
     transition: linear 0.5s;
 }
 
+.example {
+    flex-grow: 1;
+    background: #37537E;
+    color: white;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+    padding: 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pictures {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    width: 80%;
+    height: 75%;
+    align-items: center;
+}
+
 .presentation {
-    height: 30%;
-    /* position: absolute; */
-    margin-left: 25%;
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate3d(-35%, -50%, 0); */
+    height: 35%;
     border-radius: 7rem 0;
     border: 3px solid #FE5C81;
+    /* margin-right: 2rem; */
 }
