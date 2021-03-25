@@ -229,6 +229,9 @@ a {
 main {
     margin: 1.5rem 0 0 0;
     padding: 0 1rem 0 3rem;
+    background-color: #F4F5F4;
+    height: 100%;
+    width: 100%;
 }
 
 .welcome__message {
@@ -278,7 +281,7 @@ main {
 .slider {
     display: flex;
     background-color: rgba(4, 40, 94, 0.3);
-    width: 100%;
+    width: 95%;
     position: relative;
     justify-content: space-evenly;
 }
@@ -316,7 +319,7 @@ main {
     background-color: rgba(4, 40, 94, 0.6);
     top: 50%;
     left: 98%;
-    transform: translate3d(-10%, -50%, 0);
+    transform: translate3d(-12%, -50%, 0);
 }
 
 .left__arrow {
@@ -367,7 +370,7 @@ main {
     align-self: center;
     position: absolute;
     left: 100%;
-    transform: translate3d(-100%, 0%, 0);
+    transform: translate3d(-98%, 0%, 0);
 }
 
 .right__arrow::before {
